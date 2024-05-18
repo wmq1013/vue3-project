@@ -9,7 +9,7 @@ import { ref, computed, onMounted } from 'vue'
 
 // 在setup中直接定义响应式变量和计算属性
 const count = ref(0)
-const doubleCount = computed(() => count.value * 2)
+const doubleCount = computed(() => count.value * 4)
 
 // 直接定义函数
 const increment = () => {
@@ -18,6 +18,6 @@ const increment = () => {
 
 // 使用onMounted代替mounted钩子
 onMounted(() => {
-  console.log('mounted', count.value) // 0
+  console.log('mounted', count.value)
 })
 </script>
